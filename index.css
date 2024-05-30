@@ -1,41 +1,32 @@
-/* CSS for styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 20px 20px;
+    padding: 2px 2px;
 }
+
 .navbar .logo {
     font-size: 1.5em;
     color: #e310ae;
     text-decoration: none;
     margin-left: 40px;
 }
+
 .navbar nav {
     margin-right: 220px;
     display: flex;
     gap: 50px;
+}
 
-}
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-.navbar nav a:hover {
-    background-color: hsl(252, 91%, 44%);
-    box-shadow: 2px 2px 5px 3px hwb(267 3% 18%);
-    background-color: hwb(320 4% 22%);
-    color: white;
-    padding: 0px;
 
-}
+
 
 .container {
     max-width: 800px;
@@ -49,7 +40,18 @@ body {
 h2 {
     margin-top: 0;
 }
-
+a:hover{
+    background-color: hsl(257, 95%, 36%);
+}
+a{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
 button[type="submit"],
 #logoutBtn {
     background-color: #333;
@@ -62,7 +64,7 @@ button[type="submit"],
 
 button[type="submit"]:hover,
 #logoutBtn:hover {
-    background-color: #555;
+    background-color: hsl(257, 95%, 36%);
 }
 
 .footer {
@@ -72,7 +74,6 @@ button[type="submit"]:hover,
     padding: 20px;
 }
 
-/* Additional styles */
 label {
     display: block;
     margin-top: 10px;
@@ -92,6 +93,7 @@ textarea {
 textarea {
     height: 100px;
 }
+
 .message-box {
     display: none;
     background-color: #4CAF50;
@@ -121,11 +123,11 @@ textarea {
     margin-right: 10px;
 }
 
-.data{
+.data {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    width: 90%;
+    width: 70%;
     box-shadow: 5px 5px 6px 5px #3ea4af;
     background-color: rgb(240, 241, 242);
     border-top-left-radius: 1% 1%;
@@ -133,27 +135,73 @@ textarea {
     color: #0b0b0b;
     border-width: initial;
     margin-top: 30px;
-    margin-right: 5px;
+    margin-right: 0px;
     margin-bottom: 5px;
-    margin-left: 5px;
-    padding: 13px; 
+    margin-left: 0px;
+    padding: 13px;
 }
-.data h2{
+
+.data h2 {
     font-size: large;
     font-family: sans-serif;
     color: rgb(8, 79, 232);
 }
-.data ul li{
-    text-align: justify;
+
+.data ul li {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: justify;
 }
+
+#timetable-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
 #timetable-list li button {
-    margin-right: 5px; /* Adjust this value as needed */
-    margin-left: 20px;
     border-width: initial;
+    margin-right: 5px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: #0056b3;
     box-shadow: 2px 2px 4px 1px hwb(274 7% 15%);
-    background-color: hsl(330, 78%, 49%);
     border-top-left-radius: 1% 1%;
     border-bottom-right-radius: 1% 1%;
-    color: white;
+}
+
+#timetable-list li .delete-btn {
+    background-color: hsl(330, 78%, 49%);
+}
+
+#timetable-list li .complete-btn {
+    background-color: #4CAF50;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.filters .filter-btn {
+    padding: 0.5em 1em;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filters .filter-btn:hover {
+    background-color: #0056b3;
 }

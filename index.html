@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manju Study Planner</title>
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
-                <a href="logout.html">Log out</a>
+                <a id="logoutBtn">Log out</a>
             </nav>
         </div>
     </header>
@@ -26,31 +26,29 @@
         <h2 style="text-align: center;">Set Your Time Table</h2>
         <form id="timetable-form" action="">
             <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter subject">
+            <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
 
             <label for="time">Time:</label>
-            <input type="text" id="time" name="time" placeholder="Enter time">
+            <input type="text" id="time" name="time" placeholder="Enter time" required>
 
             <label for="note">Note:</label>
-            <textarea id="note" name="note" placeholder="Enter notes"></textarea>
+            <textarea id="note" name="note" placeholder="Enter notes" required></textarea>
 
             <button type="submit">Save</button>
         </form>
-
         <!-- Section to display saved data -->
-<section class="data">
-        <div id="saved-data">
-            <h2>Your Data</h2>
-            <ul id="timetable-list">
-                <!-- Saved data will be displayed here -->
-            </ul>
-        </div>
+        <section class="data">
+            <div id="saved-data">
+                <h2>Your Data</h2>
+                <ul id="timetable-list">
+                    <!-- Saved data will be displayed here -->
+                </ul>
+            </div>
+        </section>
     </div>
-</section>
     
     <footer class="footer">
         <h2>Footer</h2>
     </footer>
 </body>
 </html>
-
