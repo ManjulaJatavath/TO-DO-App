@@ -17,19 +17,18 @@ window.addEventListener('DOMContentLoaded', function() {
         messageBox.querySelector('.message').textContent = 'You have been logged out.';
     }
 
-    // Add event listener to close button
+    // Added event listener to close button
     document.querySelector('.close-btn').addEventListener('click', function() {
         messageBox.classList.remove('show');
     });
 
-    // Function to display saved data
+    // Function to displays saved data in the page
     function displaySavedData() {
         var timetableList = document.getElementById('timetable-list');
         // Clear existing data
         timetableList.innerHTML = '';
-        // Retrieve saved data from localStorage (assuming you save it there)
+        // Retrieve saved data from localStorage.
         var savedData = JSON.parse(localStorage.getItem('timetableData')) || [];
-        // Loop through saved data and create list items to display
         savedData.forEach(function(item, index) {
             var li = document.createElement('li');
             li.textContent = `Subject: ${item.subject}, Time: ${item.time}, Note: ${item.note}`;
@@ -75,10 +74,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Call the function to display saved data when the page loads
+    // Call the function to display saved data when the page loads.
     displaySavedData();
-
-    // Add event listener for form submission
     document.getElementById('timetable-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
 
@@ -93,29 +90,19 @@ window.addEventListener('DOMContentLoaded', function() {
             time: time,
             note: note
         };
-
-        // Retrieve existing data from localStorage or initialize as an empty array
         var existingData = JSON.parse(localStorage.getItem('timetableData')) || [];
-
-        // Add new data to existing array
         existingData.push(timetableData);
-
-        // Save updated data back to localStorage
         localStorage.setItem('timetableData', JSON.stringify(existingData));
 
-        // Call the function to display saved data
         displaySavedData();
 
-        // Clear the form fields after submission
         document.getElementById('subject').value = '';
         document.getElementById('time').value = '';
         document.getElementById('note').value = '';
 
-        // Display success message
         messageBox.classList.add('show');
         messageBox.querySelector('.message').textContent = 'Your timetable was successfully saved.';
 
-        // Remove the message after 10 seconds
         setTimeout(function() {
             messageBox.classList.remove('show');
         }, 10000); // 10000 milliseconds = 10 seconds
