@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manju Study Planner</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Time Table Pro</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="logout.html">Log out</a>
+            </nav>
+        </div>
+    </header>
+    <div class="message-box">
+        <p class="message">You are successfully registered!</p>
+        <button class="close-btn">✕</button>
+    </div>
+    <div class="container">
+        <h2 style="text-align: center;">Set Your Time Table</h2>
+        <form id="timetable-form" action="">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+            <label for="time">Time:</label>
+            <input type="text" id="time" name="time" placeholder="Enter time">
+
+            <label for="note">Note:</label>
+            <textarea id="note" name="note" placeholder="Enter notes"></textarea>
+
+            <button type="submit">Save</button>
+        </form>
+
+        <!-- Section to display saved data -->
+<section class="data">
+        <div id="saved-data">
+            <h2>Your Data</h2>
+            <ul id="timetable-list">
+                <!-- Saved data will be displayed here -->
+            </ul>
+        </div>
+    </div>
+</section>
+    
+    <footer class="footer">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
+
