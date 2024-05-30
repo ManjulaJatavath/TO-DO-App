@@ -25,10 +25,11 @@ window.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'register.html?logout';
     });
 
-    // Function to display saved data
+    // Function to displays saved data in the page
     function displaySavedData() {
         var timetableList = document.getElementById('timetable-list');
         timetableList.innerHTML = '';
+        // Retrieve saved data from localStorage.
         // Retrieve saved data from localStorage.
         var savedData = JSON.parse(localStorage.getItem('timetableData')) || [];
         savedData.forEach(function(item, index) {
